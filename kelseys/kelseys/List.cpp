@@ -61,7 +61,12 @@ bool List::isEmpty ()                            // determines if the list is em
 // precondition: list must not be empty
 int List::deleteAtFront ()                       // deletes the node at the front of the list
 {
-        return 0;
+    int mData = mpHead->getData();
+    ListNode * freeMe = mpHead;
+    mpHead = mpHead->getNextPtr();
+    delete freeMe;
+    
+    return mData;
 }
 
 // precondition: list must not be empty
@@ -78,6 +83,14 @@ int List::deleteAtEnd ()                         // deletes the node at the end 
 
 void List::printList ()                          // visits each node, print the node's data
 {
+    ListNode * tmp = mpHead;
+    while (tmp != NULL) {
+        cout << tmp->getData() << " ";
+        tmp = tmp->getNextPtr();
+    }
+    
+    cout << endl;
+    
 }
 
 //// allocates memory for a Listnode; initializes the memory with newData
