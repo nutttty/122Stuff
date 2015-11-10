@@ -22,11 +22,13 @@ class ListNode
 		// getters
 		int getData () const;                // used to retrieve a copy of the data in the node
 		ListNode * getNextPtr () const;      // used to retrieve a copy of the node's next pointer
-
+        ListNode * getPrevPtr () const;
+    
 		// setters
 		void setData (const int newData);            // used to modify the data in the node
-		void setNextPtr (const ListNode * pNewNext); // used to modify the node's next pointer
-
+		void setNextPtr (ListNode * pNewNext); // used to modify the node's next pointer
+        void setPrevPtr (ListNode * pNewPrev);
+    
 	private:
 		int mData;
 		ListNode *pNext;            // should be set to NULL in the constructor
