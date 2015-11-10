@@ -32,14 +32,20 @@ void List::setHeadPtr (const ListNode *pNewHead) // modifies mpHead
 		
 bool List::insertAtFront (const int newData)     // inserts newData at the beginning or front of the list
 {
+    
+    if (mpHead == NULL){
+        mpHead = new ListNode(newData);
+        return true;
+    }
+    
+    ListNode * tmp = new ListNode(newData);
+    
+    tmp->setNextPtr(mpHead);
+
+    mpHead = tmp;
     return true;
 }
 
-// insert newData in ascending order
-bool List::insertInOrder (const int newData)     // inserts newData in ascending order
-{
-        return true;
-}
 
 bool List::insertAtEnd (const int newData)       // inserts newData at the end of the list
 {
@@ -49,7 +55,7 @@ bool List::insertAtEnd (const int newData)       // inserts newData at the end o
 // returns true if the list is empty; false otherwise
 bool List::isEmpty ()                            // determines if the list is empty  
 {
-        return true;
+        return (mpHead == NULL);
 }
 
 // precondition: list must not be empty

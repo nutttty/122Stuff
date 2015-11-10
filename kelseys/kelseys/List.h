@@ -25,7 +25,6 @@ class List
 		void setHeadPtr (const ListNode *pNewHead); // modifies mpHead
 		
 		bool insertAtFront (const int newData);     // inserts newData at the beginning or front of the list
-		bool insertInOrder (const int newData);     // inserts newData in ascending order
 		bool insertAtEnd (const int newData);       // inserts newData at the end of the list
 
 		bool isEmpty ();                            // determines if the list is empty  

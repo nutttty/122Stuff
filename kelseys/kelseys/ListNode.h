@@ -12,7 +12,9 @@ class ListNode
 {
 	public:
 		ListNode (int newData = 0); // constructor - "constructs" a ListNode; initializes the object
+    
 		ListNode (ListNode &copy);  // copy constructor - implicitly invoked when a ListNode object is passed-by-value
+    
 		~ListNode ();               // destructor - implicitly invoked when a ListNode object leaves scope
 
 		// we will not define an explicit overloaded assignment operator (=)
