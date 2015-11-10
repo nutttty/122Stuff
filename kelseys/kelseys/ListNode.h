@@ -30,6 +30,7 @@ class ListNode
 	private:
 		int mData;
 		ListNode *pNext;            // should be set to NULL in the constructor
+        ListNode *pPrev;
 };
 
 #endif

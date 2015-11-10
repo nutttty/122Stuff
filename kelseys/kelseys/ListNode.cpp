@@ -1,15 +1,20 @@
 #include "ListNode.h"
 
-ListNode::ListNode (int newData)
+ListNode::ListNode (int newData) : mData(newData)
 {
+    pNext = NULL;
+    pPrev = NULL;
 }
 
-ListNode::ListNode (ListNode &copy)
+ListNode::ListNode (ListNode &copy) : mData(copy.mData)
 {
+    pNext = NULL;
+    pPrev = NULL;
 }
 
 ListNode::~ListNode ()
 {
+    
 }
 
 int ListNode::getData () const // the const indicates "constant" function; can't modify the object's data members with this function
